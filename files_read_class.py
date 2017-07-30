@@ -27,7 +27,8 @@ class files_read:
 		if not(self.is_matrix):
 			print "Fail to check the files: matrix is not exist"
 			return -1
-		self.files_array = self.pandas_frame.extract_matrix_column(1)
+		self.files_array = self.pandas_frame.extract_matrix_column(col=matrix_col_num)
+		print self.files_array
 		if (self.files_array[0] == -1):
 		 	print "Fail to check the files: matrix does not suitable"
 		self.is_files_array = True #success

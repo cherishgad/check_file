@@ -20,6 +20,7 @@ def search(dirname):
 if __name__=="__main__":
 	AVA_images = files_read_class.files_read(AVA_path)
 	print AVA_path
+	AVA_images.print_matrix()
 	print AVA_images.check_files(image_path, 1, ".jpg")
 	
 	aesthetic_list = search(aesthetic_path)
@@ -27,7 +28,7 @@ if __name__=="__main__":
 	for aesthetic_path in aesthetic_list:
 		aesthetic_images = files_read_class.files_read(aesthetic_path)
 		print aesthetic_path
-		print aesthetic_images.print_matrix
+		aesthetic_images.print_matrix()
 		print aesthetic_images.check_files(image_path, 0,".jpg")
 	
 	
@@ -36,7 +37,7 @@ if __name__=="__main__":
 	for style_path in style_list:
 		style_images = files_read_class.files_read(style_path)
 		print style_path
-		print style_images.print_matrix
+		style_images.print_matrix()
 		print style_images.check_files(image_path, 0,".jpg")
 
 
